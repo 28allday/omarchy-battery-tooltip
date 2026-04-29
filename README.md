@@ -79,6 +79,8 @@ ls -t style.css.bak.*    | head -1 | xargs -I{} cp {} style.css
 omarchy-restart-waybar
 ```
 
+> **Note:** this restores the *most recent* backup, which is the snapshot taken just before the last install run. If you've made unrelated waybar tweaks **after** installing, this will overwrite them too. In that case, either pick an older `.bak.<timestamp>` that pre-dates your other changes, or revert the patch by hand: remove `format-time`, `tooltip-format-full`, `tooltip-format-plugged` and reset `tooltip-format-discharging`/`charging` to upstream in `config.jsonc`, and delete the `/* >>> battery-tooltip */ ... /* <<< battery-tooltip */` block from `style.css`.
+
 ## Design notes
 
 See [`install-battery-tooltip.NOTES.md`](./install-battery-tooltip.NOTES.md) for the why-it-works-this-way: laptop detection layering, idempotency strategy, capacity-mode trade-off, the GTK-tooltip monospace-wrapper workaround, and known edge cases.
