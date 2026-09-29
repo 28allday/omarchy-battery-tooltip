@@ -21,19 +21,13 @@ The default tooltip on a stock Omarchy install shows just `5W↓ 69%`. This inst
 One-liner:
 
 ```bash
-curl -fsSL https://git.no-signal.uk/nosignal/omarchy-battery-tooltip/raw/branch/main/install-battery-tooltip.sh | bash
-```
-
-GitHub mirror:
-
-```bash
 curl -fsSL https://raw.githubusercontent.com/28allday/omarchy-battery-tooltip/main/install-battery-tooltip.sh | bash
 ```
 
 Or clone and run:
 
 ```bash
-git clone https://git.no-signal.uk/nosignal/omarchy-battery-tooltip.git
+git clone https://github.com/28allday/omarchy-battery-tooltip.git
 cd omarchy-battery-tooltip
 ./install-battery-tooltip.sh
 ```
